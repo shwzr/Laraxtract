@@ -29,7 +29,7 @@ urls = re.findall(r'https://filemoon\.sx/e/[\w-]+/[\w\d\._-]+', text)
 # Il supprime les doublons de la liste
 urls = list(set(urls))
 
-# Il extrait les numeros d'episodes et reformater les URL
+# Il extrait les numeros d'episodes et il reformate les URL
 episodes = []
 for url in urls:
     parts = url.split("/")
