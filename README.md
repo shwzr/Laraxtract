@@ -22,6 +22,8 @@ python extract-embed-link-laranime.py
 ```
 or
 simply click on the start.bat file
+Then go to the site laranime to find the anime you want like this example [https://laranime.tv/animes/inspectre-vostfr/saison-1/episode-01-un-oeil-une-jambe] then see the result for yourself
+
 
 ## 👤 Author
 
