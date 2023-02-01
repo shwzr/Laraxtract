@@ -9,18 +9,18 @@ url = input("Entrez un URL laranime.tv que tu peux retrouver pour l'Episode x d'
 response = requests.get(url)
 
 # Il ecrit le code source de la page dans le fichier
-with open("source_code.html", "w") as f:
+with open("source_code.html", "w", encoding="utf-8") as f:
     f.write(response.text)
 
 # Il lit le code source de la page depuis le fichier
-with open("source_code.html", "r") as f:
+with open("source_code.html", "r", encoding="utf-8") as f:
     text = f.read()
 
 # Il remplace les caracteres d'echappement
 text = text.replace("\\", "")
 
 # Il ecrit le code source de la page reformatee dans le fichier
-with open("reformatted_source_code.html", "w") as f:
+with open("reformatted_source_code.html", "w", encoding="utf-8") as f:
     f.write(text)
 
 # Il extrait les URLs en utilisant une expression rationnelle
@@ -49,7 +49,7 @@ for i, episode in enumerate(episodes):
         episodes[i] = " ".join(parts)
 
 # Il ecrit les URLs extraites triees et reformatees dans un fichier
-with open("Episodes.txt", "w") as f:
+with open("Episodes.txt", "w", encoding="utf-8") as f:
     for episode in episodes:
         f.write(episode + "\n\n")
 
