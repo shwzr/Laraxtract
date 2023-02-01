@@ -29,7 +29,7 @@ urls = re.findall(r'https://filemoon\.sx/e/[\w-]+/[\w\d\._-]+', text)
 # Il supprime les doublons de la liste
 urls = list(set(urls))
 
-# Il extrait les numeros d'episodes et il reformate les URL
+# Il extrait les numeros d'episodes et reformater les URL
 episodes = []
 for url in urls:
     parts = url.split("/")
@@ -41,10 +41,19 @@ for url in urls:
 # Il trie les episodes par numero d'episode
 episodes.sort()
 
+# Enlever le premier "0" dans les épisodes nommés "Episode 010" à "Episode 099" et le premier "00" dans les épisodes nommés "Episode 001" à "Episode 009"
+for i, episode in enumerate(episodes):
+    parts = episode.split(" ")
+    if parts[1].startswith("0"):
+        parts[1] = str(int(parts[1]))
+        episodes[i] = " ".join(parts)
+
 # Il ecrit les URLs extraites triees et reformatees dans un fichier
 with open("Episodes.txt", "w") as f:
     for episode in episodes:
-        f.write(episode + "\n")
+        f.write(episode + "\n\n")
+
+        
 
 # Il supprime les fichiers de code source
 os.remove("source_code.html")
