@@ -14,6 +14,10 @@
 
 ## 🚀 Usage
 
+Avant de lancer  le programme, oublie pas d'effectuer cette commande sur le cmd : ```sh
+pip install requests
+```
+
 ```sh
 python extract-embed-link-laranime.py
 ```
