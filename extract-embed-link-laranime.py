@@ -2,6 +2,10 @@ import requests
 import re
 import os
 
+# Il verifie si le fichier "Episodes.txt" existe et il le supprime si c'est le cas.
+if os.path.exists("Episodes.txt"):
+    os.remove("Episodes.txt")
+
 # Obtiens l'URL de l'utilisateur
 url = input("Entrez un URL laranime.tv que tu peux retrouver pour l'Episode x d'un anime : ")
 
@@ -34,26 +38,29 @@ episodes = []
 for url in urls:
     parts = url.split("/")
     stripped_url = "/".join(parts[:5])
-    episode_number = re.search(r'Episode_(\d+)', url).group(1)
-    episode = f"Episode {int(episode_number):03d} : {stripped_url}"
-    episodes.append(episode)
+    match = re.search(r'Episode_(\d+)', url)
+    if match:
+        episode_number = match.group(1)
+        episode = f"Episode {int(episode_number):03d} : {stripped_url}"
+        episodes.append(episode)
+
 
 # Il trie les episodes par numero d'episode
 episodes.sort()
 
-# Enlever le premier "0" dans les épisodes nommés "Episode 010" à "Episode 099" et le premier "00" dans les épisodes nommés "Episode 001" à "Episode 009"
+# Il enleve le premier "0" dans les episodes nommes "Episode 010" a "Episode 099" et le premier "00" dans les episodes nommes "Episode 001" a "Episode 009"
 for i, episode in enumerate(episodes):
     parts = episode.split(" ")
     if parts[1].startswith("0"):
         parts[1] = str(int(parts[1]))
         episodes[i] = " ".join(parts)
 
+episodes.sort(key=lambda x: int(x.split(" ")[1])) 
+
 # Il ecrit les URLs extraites triees et reformatees dans un fichier
 with open("Episodes.txt", "w", encoding="utf-8") as f:
     for episode in episodes:
         f.write(episode + "\n\n")
-
-        
 
 # Il supprime les fichiers de code source
 os.remove("source_code.html")
