@@ -2,21 +2,17 @@ import requests
 import re
 import os
 
-# Supprime les fichiers s'ils existent
-for i in range(1, 3):
-    file_path = f"{i}-Episodes.txt"
-    if os.path.exists(file_path):
-        os.remove(file_path)
-
 # Demande l'URL à l'utilisateur
 url = input("Entrez un URL laranime.tv pour un épisode d'un anime : ")
 
 # Récupère le code source de la page
 response = requests.get(url)
+
+# Remplace les caracteres d'echappement
 text = response.text.replace("\\", "")
 
 # Extrait les URLs en utilisant une expression rationnelle
-urls = re.findall(r'https://filemoon\.sx/e/[\w-]+/[\w\d\._-]+', text)
+urls = re.findall(r'https://filemoon\.sx/e/[\w-]+/[\w\(\)\._-]+', text)
 
 # Supprime les doublons de la liste
 urls = list(set(urls))
@@ -48,5 +44,6 @@ with open(file_path, "w", encoding="utf-8") as f:
     for episode in episodes:
         f.write(episode + "\n\n")
 
-    os.remove("source_code.html")
-    os.remove("reformatted_source_code.html")
+# Supprime les fichiers html
+os.remove("source_code.html")
+os.remove("reformatted_source_code.html")
