@@ -2,10 +2,28 @@ import requests
 import re
 import os
 
-# Demande l'URL à l'utilisateur
-url = input("Entrez un URL laranime.tv d'un épisode d'un anime : ")
+# Supprime le Episodes.txt s'il est present
+if os.path.exists("Episodes.txt"):
+    os.remove("Episodes.txt")
 
-# Récupère le code source de la page
+# Fonction pour verifier la validite de l'URL
+def is_valid_url(url):
+    if url.count("/") < 6:
+        return False
+    parts = url.split("/")
+    if not parts[-1]:
+        return False
+    return True
+
+ # Demande l'URL a l'utilisateur
+while True:
+    url = input("Entrez un URL laranime.tv d'un episode d'un anime : ")
+    if is_valid_url(url):
+        break
+    else:
+        print("Ce lien est invalide. Voici un exemple (https://laranime.tv/animes/high-card-vostfr/saison-1/episode-01-one-shot)")
+
+# Recupere le code source de la page
 response = requests.get(url)
 
 # Remplace les caracteres d'echappement
@@ -13,14 +31,13 @@ text = response.text.replace("\\", "")
 
 # Extrait les URLs en utilisant une expression rationnelle
 urls = re.findall(r'https://filemoon\.sx/e/[\w-]+/[\w\(\)\._-]+', text)
-
 if not urls:
     urls = re.findall(r'https://streamlare.com/e/[\w]+/[\w\.-]+', text)
 
 # Supprime les doublons de la liste
 urls = list(set(urls))
 
-# Extrait les numéros d'épisodes et reformate les URLs
+# Extrait les numeros d'episodes et reformate les URLs
 episodes = []
 for url in urls:
     parts = url.split("/")
@@ -33,17 +50,17 @@ for url in urls:
         episode = f"Episode {int(episode_number):03d} : {stripped_url}"
         episodes.append(episode)
 
-# Trie les épisodes par numéro d'épisode
+# Trie les episodes par numero d'episode
 episodes.sort(key=lambda x: int(x.split(" ")[1]))
 
-# Enlève le premier "0" dans les épisodes nommés "Episode 010" à "Episode 099" et le premier "00" dans les épisodes nommés "Episode 001" à "Episode 009"
+# Enleve le premier "0" dans les episodes nommes "Episode 010" a "Episode 099" et le premier "00" dans les episodes nommes "Episode 001" a "Episode 009"
 for i, episode in enumerate(episodes):
     parts = episode.split(" ")
     if parts[1].startswith("0"):
         parts[1] = str(int(parts[1]))
         episodes[i] = " ".join(parts)
 
-# Écrit les URLs extraites triées et reformatées dans un fichier
+# Ecrit les URLs extraites triees et reformatees dans un fichier
 file_path = "Episodes.txt"
 with open(file_path, "w", encoding="utf-8") as f:
     for episode in episodes:
