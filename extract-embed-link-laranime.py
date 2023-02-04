@@ -49,5 +49,6 @@ with open(file_path, "w", encoding="utf-8") as f:
     for episode in episodes:
         f.write(episode + "\n\n")
 
+# Supprime les fichiers de html
 os.remove("source_code.html")
 os.remove("reformatted_source_code.html")
