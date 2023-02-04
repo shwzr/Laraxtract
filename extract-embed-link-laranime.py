@@ -7,7 +7,9 @@ if os.path.exists("Episodes.txt"):
     os.remove("Episodes.txt")
 
 # Fonction pour verifier la validite de l'URL
-def is_valid_url(url):
+def is_valid_laranime_url(url):
+    if not url.startswith("https://laranime.tv"):
+        return False
     if url.count("/") < 6:
         return False
     parts = url.split("/")
@@ -18,7 +20,7 @@ def is_valid_url(url):
  # Demande l'URL a l'utilisateur
 while True:
     url = input("Entrez un URL laranime.tv d'un episode d'un anime : ")
-    if is_valid_url(url):
+    if is_valid_laranime_url(url):
         break
     else:
         print("Ce lien est invalide. Voici un exemple (https://laranime.tv/animes/high-card-vostfr/saison-1/episode-01-one-shot)")
