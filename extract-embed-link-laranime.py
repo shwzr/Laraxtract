@@ -3,7 +3,7 @@ import re
 import os
 
 # Demande l'URL à l'utilisateur
-url = input("Entrez un URL laranime.tv pour un épisode d'un anime : ")
+url = input("Entrez un URL laranime.tv d'un épisode d'un anime : ")
 
 # Récupère le code source de la page
 response = requests.get(url)
@@ -14,6 +14,9 @@ text = response.text.replace("\\", "")
 # Extrait les URLs en utilisant une expression rationnelle
 urls = re.findall(r'https://filemoon\.sx/e/[\w-]+/[\w\(\)\._-]+', text)
 
+if not urls:
+    urls = re.findall(r'https://streamlare.com/e/[\w]+/[\w\.-]+', text)
+
 # Supprime les doublons de la liste
 urls = list(set(urls))
 
@@ -23,6 +26,8 @@ for url in urls:
     parts = url.split("/")
     stripped_url = "/".join(parts[:5])
     match = re.search(r'Episode_(\d+)', url)
+    if not match:
+        match = re.search(r'(\d+)[\w\.-]+', parts[-1])
     if match:
         episode_number = match.group(1)
         episode = f"Episode {int(episode_number):03d} : {stripped_url}"
@@ -39,11 +44,10 @@ for i, episode in enumerate(episodes):
         episodes[i] = " ".join(parts)
 
 # Écrit les URLs extraites triées et reformatées dans un fichier
-file_path = "1-Episodes.txt"
+file_path = "Episodes.txt"
 with open(file_path, "w", encoding="utf-8") as f:
     for episode in episodes:
         f.write(episode + "\n\n")
 
-# Supprime les fichiers html
 os.remove("source_code.html")
 os.remove("reformatted_source_code.html")
