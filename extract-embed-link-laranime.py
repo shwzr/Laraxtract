@@ -2,7 +2,7 @@ import requests
 import re
 import os
 
-# Supprime le Episodes.txt s'il est present
+# Supprime Episodes.txt s'il est present
 if os.path.exists("Episodes.txt"):
     os.remove("Episodes.txt")
 
