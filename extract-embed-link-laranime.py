@@ -32,7 +32,8 @@ response = requests.get(url)
 text = response.text.replace("\\", "")
 
 # Extrait les URLs en utilisant une expression rationnelle
-urls = re.findall(r'https://filemoon\.sx/e/[\w-]+/[\w\(\)\._-]+', text)
+urls = re.findall(r'https://filemoon\.sx/e/[\w-]+/[\w\(\)\!\._-]+\.mp4', text)
+
 if not urls:
     urls = re.findall(r'https://streamlare.com/e/[\w]+/[\w\.-]+', text)
 
@@ -67,7 +68,3 @@ file_path = "Episodes.txt"
 with open(file_path, "w", encoding="utf-8") as f:
     for episode in episodes:
         f.write(episode + "\n\n")
-
-# Supprime les fichiers de html
-os.remove("source_code.html")
-os.remove("reformatted_source_code.html")
