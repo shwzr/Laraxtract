@@ -47,7 +47,7 @@ for url in urls:
     stripped_url = "/".join(parts[:5])
     match = re.search(r'Episode_(\d+)', url)
     if not match:
-        match = re.search(r'(\d+)[\w\.-]+', parts[-1])
+        match = re.search(r'episode-(\d+)[\w\.-]+', url)
     if match:
         episode_number = match.group(1)
         episode = f"Episode {int(episode_number):03d} : {stripped_url}"
