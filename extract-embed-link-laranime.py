@@ -8,8 +8,8 @@ if os.path.exists("Episodes.txt"):
 
 # Fonction pour verifier la validite de l'URL
 def is_valid_laranime_url(url):
-    if not url.startswith("https://laranime.tv"):
-        return False
+    if not url.startswith("https://laranime.tv/"):
+        return True
     if url.count("/") < 6:
         return False
     parts = url.split("/")
