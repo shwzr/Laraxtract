@@ -6,7 +6,7 @@
   </a>
 </p>
 
-> Just a little .py file that generates discord nitro. 
+> Just a small .py file that retrieves the streaming links from the laranime.tv site.
 
 ##  👇 Downloads
 
