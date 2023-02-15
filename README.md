@@ -14,7 +14,7 @@
 
 ## 🚀 Usage
 
-**First Step : **
+**First Step :**
 
 ```sh
 pip install requests
