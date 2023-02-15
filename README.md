@@ -40,6 +40,6 @@ Give a ⭐️ if this project helped you!
 
 ## 📝 License
 
-Copyright © 2022 [Showzur](https://github.com/shwzr).<br />
+Copyright © 2023 [Showzur](https://github.com/shwzr).<br />
 
 ***
