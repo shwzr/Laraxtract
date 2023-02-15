@@ -14,13 +14,13 @@
 
 ## 🚀 Usage
 
-First Step : 
+**First Step : **
 
 ```sh
 pip install requests
 ```
 
-Second Step : 
+**Second Step :** 
 
 Simply click on the start.bat file<br><br>
 Then go to the site laranime to find the anime you want like this example<br> [https://laranime.tv/animes/inspectre-vostfr/saison-1/episode-01-un-oeil-une-jambe] then see the result for yourself.
