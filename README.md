@@ -6,7 +6,7 @@
 <img src="https://img.shields.io/github/license/shwzr/laraxtract?style=flat-square" alt="Laraxtract"/>
 </a>
 <a href="https://github.com/shwzr/Laraxtract/releases">
-<img alt="GitHub release" src="https://img.shields.io/github/release/huggingface/transformers.svg">
+<img alt="GitHub release" src="https://img.shields.io/github/release/shwzr/Laraxtract.svg">
 </a>
 <a href="https://github.com/shwzr/laraxtract/stargazers" target="blank">
 <img src="https://img.shields.io/github/stars/shwzr/laraxtract?style=flat-square" alt="github-profile-readme-generator stars"/>
