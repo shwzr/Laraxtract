@@ -18,24 +18,16 @@
 
 ## 🚀 Usage - Exe Method
 
-**First Step :**
+**First Step :** Simply click on the vc_redist.x64.exe file
 
-Simply click on the vc_redist.x64.exe file
-
-**Second Step :** 
-
-Simply click on the laraxtract.exe file<br><br>
+**Second Step :** Simply click on the laraxtract.exe file<br><br>
 Then go to the site laranime to find the anime you want like this example<br> [https://laranime.tv/animes/inspectre-vostfr/saison-1/episode-01-un-oeil-une-jambe] then see the result for yourself.
 
 ## 🚀 Usage - Python Method
 
-**First Step :**
+**First Step :** Simply click on the Install.bat file
 
-Simply click on the Install.bat file
-
-**Second Step :** 
-
-Simply click on the Start.bat file<br><br>
+**Second Step :** Simply click on the Start.bat file<br><br>
 
 
 ## 👤 Author
