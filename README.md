@@ -6,7 +6,7 @@
 <img src="https://img.shields.io/github/license/shwzr/laraxtract?style=flat-square" alt="Laraxtract"/>
 </a>
 <a href="https://discord.gg/UHy8mZsNh8" target="blank">
-<img src="https://img.shields.io/discord/891691689356447745?label=Join%20Community&logo=discord&style=flat-square" alt="join the discord community of Showzur"/>
+<img src="https://img.shields.io/discord/891691689356447745&logo=discord&style=flat-square" alt="join the discord community of Showzur"/>
 </a>
 </p>
 
