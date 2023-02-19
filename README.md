@@ -5,9 +5,6 @@
 <a href="https://github.com/shwzr/Laraxtract/blob/main/LICENSE" target="blank">
 <img src="https://img.shields.io/github/license/shwzr/laraxtract?style=flat-square" alt="Laraxtract"/>
 </a>
-<a href="https://discord.gg/UHy8mZsNh8" target="blank">
-<img src="https://img.shields.io/discord/891691689356447745?label=Join%20Community" alt="join the discord community"/>
-</a>
 </p>
 
 > 🪝 Here is a program that retrieves streaming links from the laranime.tv website.
