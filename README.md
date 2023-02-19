@@ -2,8 +2,11 @@
 
 <p>
 <p align="center">
-<a href="https://github.com/shwzr/laraxtract/LICENSE" target="blank">
+<a href="https://github.com/shwzr/Laraxtract/blob/main/LICENSE" target="blank">
 <img src="https://img.shields.io/github/license/shwzr/laraxtract?style=flat-square" alt="Laraxtract"/>
+</a>
+<a href="https://discord.gg/UHy8mZsNh8" target="blank">
+<img src="https://img.shields.io/discord/735303195105951764?label=Join%20Community&logo=discord&style=flat-square" alt="join the discord community of Showzur"/>
 </a>
 </p>
 
