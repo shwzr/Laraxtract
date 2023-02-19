@@ -6,7 +6,7 @@
   </a>
 </p>
 
-> Just a small .py file that retrieves the streaming links from the laranime.tv site.
+> 🪝 Here is a program that retrieves streaming links from the laranime.tv website.
 
 
 <img alt="Twitter: Showzur" src="src/Laraxtract.png" />
