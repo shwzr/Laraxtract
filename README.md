@@ -12,7 +12,18 @@
 
 [<img src="https://github.com/machiav3lli/oandbackupx/blob/034b226cea5c1b30eb4f6a6f313e4dadcbb0ece4/badge_github.png" alt="Get it on GitHub" height="65">](https://github.com/shwzr/extract-embed-link-laranime/releases/latest) 
 
-## 🚀 Usage
+## 🚀 Usage - Exe Method
+
+**First Step :**
+
+Simply click on the vc_redist.x64.exe file
+
+**Second Step :** 
+
+Simply click on the laraxtract.exe file<br><br>
+Then go to the site laranime to find the anime you want like this example<br> [https://laranime.tv/animes/inspectre-vostfr/saison-1/episode-01-un-oeil-une-jambe] then see the result for yourself.
+
+## 🚀 Usage - Python Method
 
 **First Step :**
 
@@ -21,7 +32,6 @@ Simply click on the Install.bat file
 **Second Step :** 
 
 Simply click on the Start.bat file<br><br>
-Then go to the site laranime to find the anime you want like this example<br> [https://laranime.tv/animes/inspectre-vostfr/saison-1/episode-01-un-oeil-une-jambe] then see the result for yourself.
 
 
 ## 👤 Author
