@@ -8,7 +8,7 @@
 
 > 🪝 Here is a program that retrieves streaming links from the laranime.tv website.
 
-<img alt="Laranime" src="src/Laranime.png"/>
+<img alt="Laranime" src="src/Laraxtract.png"/>
 
 ##  👇 Downloads
 
