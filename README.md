@@ -1,9 +1,10 @@
 <h1 align="center">Welcome to the Laraxtract <img src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExYWY5ZDFmZWQ0NjkxN2RhZGYzZWNjMDBiYzFlMWFiYjUzOTBmN2ZjZSZjdD1z/8JZbWuvC4zRenAWyxy/giphy.gif" width="40px"></h1>
 
 <p>
-  <a href="https://twitter.com/Showzur" target="_blank">
-    <img alt="Twitter: Showzur" src="https://img.shields.io/twitter/follow/Showzur.svg?style=social" />
-  </a>
+<p align="center">
+<a href="https://github.com/shwzr/laraxtract/LICENSE" target="blank">
+<img src="https://img.shields.io/github/license/shwzr/laraxtract?style=flat-square" alt="Laraxtract"/>
+</a>
 </p>
 
 > 🪝 Here is a program that retrieves streaming links from the laranime.tv website.
