@@ -8,9 +8,13 @@
 
 > 🪝 Here is a program that retrieves streaming links from the laranime.tv website.
 
-
+<p>
 <img alt="Twitter: Showzur" src="src/Laraxtract.png" />
-
+<p align="center">
+<a href="https://github.com/shwzr/laraxtract/LICENSE" target="blank">
+<img src="https://img.shields.io/github/license/shwzr/laraxtract?style=flat-square" alt="Laraxtract"/>
+</a>
+</p>
 
 ##  👇 Downloads
 
