@@ -29,7 +29,6 @@ Then go to the site laranime to find the anime you want like this example<br> [h
 
 **Second Step :** Simply click on the Start.bat file<br><br>
 
-
 ## 👤 Author
 
 **Showzur**
