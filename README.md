@@ -1,4 +1,4 @@
-<h1 align="center">Welcome to the Laraxtract <img src="https://media0.giphy.com/media/HzX6oEnCzWsHVuCNhi/giphy.gif" width="80px"></h1>
+<h1 align="center">Welcome to the Laraxtract <img src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExYWY5ZDFmZWQ0NjkxN2RhZGYzZWNjMDBiYzFlMWFiYjUzOTBmN2ZjZSZjdD1z/8JZbWuvC4zRenAWyxy/giphy.gif" width="80px"></h1>
 
 <p>
   <a href="https://twitter.com/Showzur" target="_blank">
