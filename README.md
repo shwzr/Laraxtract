@@ -19,7 +19,7 @@
 
 ##  👇 Downloads
 
-[<img src="https://github.com/machiav3lli/oandbackupx/blob/034b226cea5c1b30eb4f6a6f313e4dadcbb0ece4/badge_github.png" alt="Get it on GitHub" height="65">](https://github.com/shwzr/extract-embed-link-laranime/releases/latest) 
+[<img src="https://github.com/machiav3lli/oandbackupx/blob/034b226cea5c1b30eb4f6a6f313e4dadcbb0ece4/badge_github.png" alt="Get it on GitHub" height="65">](https://github.com/shwzr/Laraxtract/releases/latest) 
 
 ## 🚀 Usage - Exe Method
 
