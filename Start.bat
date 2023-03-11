@@ -1,1 +1,0 @@
-python laraxtract.py
