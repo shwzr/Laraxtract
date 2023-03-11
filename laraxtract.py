@@ -5,6 +5,8 @@ import requests
 import re
 import os
 
+icon_path = "laranime.ico"
+
 # Supprime Episodes.txt s'il est present
 if os.path.exists("Episodes.txt"):
     os.remove("Episodes.txt")
@@ -12,7 +14,7 @@ if os.path.exists("Episodes.txt"):
 # Fonction pour verifier la validite de l'URL
 def is_valid_laranime_url(url):
     if not url.startswith("https://laranime.tv/"):
-        return True
+        return False
     if url.count("/") < 6:
         return False
     parts = url.split("/")
@@ -70,11 +72,12 @@ def extract_urls():
         return
     episodes = write_episode_urls_to_file(url, regex)
     url_text.delete("1.0", tk.END)
-    url_text.insert(tk.END, "\n".join(episodes))
+    url_text.insert(tk.END, "\n\n".join(episodes))
 
 # Créer la fenêtre principale à l'intérieur du conteneur Frame
 window = tk.Tk()
 window.title("Laraxtract")
+window.iconbitmap(default=icon_path)
 window.resizable(0,0)
 window.configure(background="#F5F5F5")
 url_label = tk.Label(window, text="URL de la série :", font=("Helvetica", 14), fg="#333333", bg="#F5F5F5")
