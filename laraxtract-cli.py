@@ -8,8 +8,6 @@ if os.path.exists("Episodes.txt"):
 
 # Fonction pour verifier la validite de l'URL
 def is_valid_laranime_url(url):
-    if not url.startswith("https://laranime.tv/"):
-        return True
     if url.count("/") < 6:
         return False
     parts = url.split("/")
@@ -33,7 +31,6 @@ text = response.text.replace("\\", "")
 
 # Extrait les URLs en utilisant une expression rationnelle
 urls = re.findall(r'https://filemoon\.sx/e/[\w-]+/[\w\(\)\!\._-]+\.mp4', text)
-
 if not urls:
     urls = re.findall(r'https://streamlare.com/e/[\w]+/[\w\.-]+', text)
 
